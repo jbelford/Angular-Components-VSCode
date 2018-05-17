@@ -1,0 +1,81 @@
+{
+    "name": "angular-components",
+    "displayName": "Angular Components",
+    "description": "Automatic organization of windows for html, css, and component files when navigating between components",
+    "version": "1.0.0",
+    "publisher": "jbelford",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "workspaceContains:**/{.angular-cli,angular}.json"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Angular Components",
+            "properties": {
+                "angular.order": {
+                    "type": "string",
+                    "description": "Order of windows for each filetype",
+                    "default": "typescript html css",
+                    "enum":[
+                        "typescript html css",
+                        "typescript css html",
+                        "html typescript css",
+                        "html css typescript",
+                        "css typescript html",
+                        "css html typescript",
+                        "typescript html",
+                        "html typescript",
+                        "typescript css",
+                        "css typescript"
+                    ]
+                },
+                "angular.preview": {
+                    "type": "boolean",
+                    "description": "Whether component files should open as previews",
+                    "default": true
+                },
+                "angular.automatic": {
+                    "type": "boolean",
+                    "description": "Open corresponding files automatically when editor switches to a component.ts file",
+                    "default": true
+                }
+            }
+        },
+        "views": {
+            "explorer": [
+                {
+                    "id": "angularComponents",
+                    "name": "Angular Components"
+                }
+            ]
+        },
+        "commands":[
+            {
+                "category": "angular",
+                "command": "angular.componentView",
+                "title": "View component files"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
