@@ -2,12 +2,13 @@
     "name": "angular-components",
     "displayName": "Angular Components",
     "description": "Automatic organization of windows for html, css, and component files when navigating between components",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "jbelford",
     "repository": {
         "type": "git",
         "url": "git://github.com/jbelford/Angular-Components-VSCode"
     },
+    "icon": "angular.png",
     "engines": {
         "vscode": "^1.23.0"
     },
@@ -27,7 +28,7 @@
                     "type": "string",
                     "description": "Order of windows for each filetype",
                     "default": "typescript html css",
-                    "enum":[
+                    "enum": [
                         "typescript html css",
                         "typescript css html",
                         "html typescript css",
@@ -60,7 +61,7 @@
                 }
             ]
         },
-        "commands":[
+        "commands": [
             {
                 "category": "angular",
                 "command": "angular.componentView",
