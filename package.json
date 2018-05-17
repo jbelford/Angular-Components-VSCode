@@ -4,6 +4,10 @@
     "description": "Automatic organization of windows for html, css, and component files when navigating between components",
     "version": "1.0.0",
     "publisher": "jbelford",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/jbelford/Angular-Components-VSCode"
+    },
     "engines": {
         "vscode": "^1.23.0"
     },
