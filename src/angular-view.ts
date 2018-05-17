@@ -50,7 +50,7 @@ export class AngularComponentsProvider implements vscode.TreeDataProvider<Compon
 }
 
 class Component extends vscode.TreeItem {
-  iconPath = path.join(__filename, '..', '..', 'resources', 'icons', 'angular.svg');
+  iconPath = path.join(__filename, '..', '..', 'resources', 'icons', 'angular.png');
 
   constructor(
     public readonly label: string,
